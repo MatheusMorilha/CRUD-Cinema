@@ -16,7 +16,7 @@ int main () {
     printf("\n=============== Menu ==================\n");
     printf("|  [1] - Cadastrar                      |\n");
     printf("|  [2] - Listar filmes/clientes         |\n");
-    printf("|  [3] - Listar todos os clientes       |\n");
+    printf("|  [3] - Comprar ingresso               |\n");
     printf("|  [4] - Alterar cadastros              |\n");
     printf("|  [5] - Excluir                        |\n");
     printf("|  [6] - Limpar a Tela                  |\n");

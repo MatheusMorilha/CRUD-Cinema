@@ -3,6 +3,7 @@
 #include<string.h>
 
 #include "struct.h"
+#include "Cadastro.h"
 
 void Listar();
 void listar_filme();
@@ -35,11 +36,18 @@ void Listar(){
 }
 
 void listar_filme(){
-    FILE *filmes = fopen("filmes.txt", "r");
-    if (filmes == NULL)
-    {
-        printf("Erro ao abrir o arquivo.\n");
-        return;
+    // FILE *filmes = fopen("filmes.txt", "r");
+    // if (filmes == NULL)
+    // {
+    //     printf("Erro ao abrir o arquivo.\n");
+    //     return;
+    // }
+
+    for(int i = 0; i < *tamanhoMaxFilme; i++){
+        printf("Id: %i\n", dadosFilmes[i].id)
+        printf("Nome: %s\n", dadosFilmes[i].nome);
+        printf("Ano de Lancamento: %i\n", dadosFilmes[i].anoLanc);
+        printf("Preco: %.2f\n", dadosFilmes[i].preco);
     }
 
     
