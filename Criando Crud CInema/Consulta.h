@@ -36,21 +36,38 @@ void Listar(){
 }
 
 void listar_filme(){
-    // FILE *filmes = fopen("filmes.txt", "r");
-    // if (filmes == NULL)
-    // {
-    //     printf("Erro ao abrir o arquivo.\n");
-    //     return;
-    // }
-
-    for(int i = 0; i < *tamanhoMaxFilme; i++){
-        printf("Id: %i\n", dadosFilmes[i].id)
-        printf("Nome: %s\n", dadosFilmes[i].nome);
-        printf("Ano de Lancamento: %i\n", dadosFilmes[i].anoLanc);
-        printf("Preco: %.2f\n", dadosFilmes[i].preco);
+    FILE *filmes = fopen("filmes.txt", "r");
+    if (filmes == NULL)
+    {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
     }
 
-    
+    struct dadosFilmes dados;
+
+    while (fscanf(filmes, "%d %30s %d %f", &dados.id, dados.nome, &dados.anoLanc, &dados.preco) == 4){
+        printf("Id: %d\n", dados.id);
+        printf("Nome: %s\n", dados.nome);
+        printf("Ano de Lancamento: %d\n", dados.anoLanc);
+        printf("Preco: %f\n", dados.preco);
+    }
+    fclose(filmes);
 }
 
-void listar_cliente(){}
+void listar_cliente(){
+    FILE *clientes = fopen("clientes.txt", "r");
+    if (clientes == NULL)
+    {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
+
+    struct dadosClientes dados;
+
+    while (fscanf(clientes, "%d %30s %d", &dados.codigo, dados.nome, &dados.idade) == 3){
+        printf("Id: %d\n", dados.codigo);
+        printf("Nome: %s\n", dados.nome);
+        printf("Idade: %d\n", dados.idade);
+    }
+    fclose(clientes);
+}
