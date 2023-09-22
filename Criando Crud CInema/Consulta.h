@@ -41,6 +41,8 @@ void listar_filme(){
         printf("Erro ao abrir o arquivo.\n");
         return;
     }
+
+    
 }
 
 void listar_cliente(){}

@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include "Cadastro.h"
+#include "Consulta.h"
 
 
 
@@ -33,7 +34,7 @@ int main () {
         
         case 2:
             system("cls");
-            Consulta();            
+            Listar();            
             break;
         
         
