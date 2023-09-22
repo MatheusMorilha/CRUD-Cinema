@@ -14,7 +14,7 @@ int main () {
     system("cls");
     printf("\n=============== Menu ==================\n");
     printf("|  [1] - Cadastrar                      |\n");
-    printf("|  [2] - Listar todos os filmes         |\n");
+    printf("|  [2] - Listar filmes/clientes         |\n");
     printf("|  [3] - Listar todos os clientes       |\n");
     printf("|  [4] - Alterar cadastros              |\n");
     printf("|  [5] - Excluir                        |\n");
@@ -33,7 +33,7 @@ int main () {
         
         case 2:
             system("cls");
-            
+            Consulta();            
             break;
         
         
