@@ -1,73 +1,86 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+void listar_filme(){
+    while(1){
 
-#include "struct.h"
-#include "Cadastro.h"
+        FILE *filmes = fopen("filmes.txt", "r");
+        if (filmes == NULL){
+            printf("Erro ao abrir o arquivo.\n");
+            return;
+        }else{
+            int vazio = fgetc(filmes);
+            if(vazio == EOF){
+                printf("Ainda nao foi cadastrado nenhum filme\n");
+            }else{
+                fseek(filmes, 0, SEEK_SET);
+                char linhaf[100];
+                while(fgets(linhaf, sizeof(linhaf), filmes)){
+                    printf("%s", linhaf);
+                }
+            }
+            fclose(filmes);
+        }
 
-void Listar();
-void listar_filme();
-void listar_cliente();
+        printf("\nDigite 0 para voltar para o menu principal: ");
+        int zero;
+        scanf("%d", &zero);
+        if (zero == 0) {
+            break;
+        }
+    }
+}    
+
+
+void listar_cliente(){
+    while (1){
+
+        FILE *clientes = fopen("clientes.txt", "r");
+        if (clientes == NULL){
+            printf("Erro ao abrir o arquivo.\n");
+            return;
+        }else{
+            int vazio = fgetc(clientes);
+            if(vazio == EOF){
+                printf("Ainda nao foi cadastrado nenhum cliente\n");
+            }else{
+                fseek(clientes, 0, SEEK_SET);
+                char linhac[100];
+                while (fgets(linhac, sizeof(linhac), clientes)){
+                    printf("%s", linhac);
+                }
+            }
+            fclose(clientes);
+        }
+
+        printf("\nDigite 0 para voltar para o menu principal: ");
+        int zero;
+        scanf("%d", &zero);
+        if (zero == 0) {
+            break;
+        }
+    }
+    
+
+}
 
 void Listar(){
-    int listar;
+    int opc;
 
-    printf("\n=========== Listar =============\n");
+    printf("\n=========== Listar ===============\n");
     printf("|  [1] - Listar Filme            |\n");
     printf("|  [2] - Listar Cliente          |\n");
-    printf("|  [3] - Voltar Menu Principa    |\n");
+    printf("|  [0] - Voltar Menu Principal   |\n");
     printf("==================================\n");
     printf("Digite a opcao desejada: ");
     fflush(stdin);
-    scanf("%d", &listar);
+    scanf("%d", &opc);
 
-    switch (listar)
-    {
+    switch (opc){
     case 1:
         listar_filme();
         break;
-    
     case 2:
         listar_cliente();
         break;
     default:
         break;
     }
-}
-
-void listar_filme(){
-    FILE *filmes = fopen("filmes.txt", "r");
-    if (filmes == NULL)
-    {
-        printf("Erro ao abrir o arquivo.\n");
-        return;
-    }
-
-    struct dadosFilmes dados;
-
-    while (fscanf(filmes, "%d %30s %d %f", &dados.id, dados.nome, &dados.anoLanc, &dados.preco) == 4){
-        printf("Id: %d\n", dados.id);
-        printf("Nome: %s\n", dados.nome);
-        printf("Ano de Lancamento: %d\n", dados.anoLanc);
-        printf("Preco: %f\n", dados.preco);
-    }
-    fclose(filmes);
-}
-
-void listar_cliente(){
-    FILE *clientes = fopen("clientes.txt", "r");
-    if (clientes == NULL)
-    {
-        printf("Erro ao abrir o arquivo.\n");
-        return;
-    }
-
-    struct dadosClientes dados;
-
-    while (fscanf(clientes, "%d %30s %d", &dados.codigo, dados.nome, &dados.idade) == 3){
-        printf("Id: %d\n", dados.codigo);
-        printf("Nome: %s\n", dados.nome);
-        printf("Idade: %d\n", dados.idade);
-    }
-    fclose(clientes);
 }

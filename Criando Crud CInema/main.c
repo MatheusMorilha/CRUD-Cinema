@@ -6,14 +6,12 @@
 #include "Cadastro.h"
 #include "Consulta.h"
 
-
-
 int main () {
     int option = 0;
     int menuLoop = 0;
  do{
     system("cls");
-    printf("\n=============== Menu ==================\n");
+    printf("\n=============== Menu ====================\n");
     printf("|  [1] - Cadastrar                      |\n");
     printf("|  [2] - Listar filmes/clientes         |\n");
     printf("|  [3] - Comprar ingresso               |\n");
@@ -34,10 +32,14 @@ int main () {
         
         case 2:
             system("cls");
-            Listar();            
+            Listar();
             break;
-        
-        
+        case 7:
+            menuLoop = 1;
+            break;
+            
+        default:
+            break;;
       
     }
 
