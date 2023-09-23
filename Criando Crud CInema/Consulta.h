@@ -60,27 +60,3 @@ void listar_cliente(){
     
 
 }
-
-void Listar(){
-    int opc;
-
-    printf("\n=========== Listar ===============\n");
-    printf("|  [1] - Listar Filme            |\n");
-    printf("|  [2] - Listar Cliente          |\n");
-    printf("|  [0] - Voltar Menu Principal   |\n");
-    printf("==================================\n");
-    printf("Digite a opcao desejada: ");
-    fflush(stdin);
-    scanf("%d", &opc);
-
-    switch (opc){
-    case 1:
-        listar_filme();
-        break;
-    case 2:
-        listar_cliente();
-        break;
-    default:
-        break;
-    }
-}

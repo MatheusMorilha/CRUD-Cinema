@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include "Cadastro.h"
+#include "Consulta.h"
 #include "Comprar.h"
 #include "struct.h"
 
@@ -31,7 +32,7 @@ int main() {
 
         switch (opcao) {
             case 1:
-            system("cls");
+                system("cls");
                 cadastrarFilme(&filmes, &numFilmes);
                 break;
             case 2:
@@ -39,9 +40,11 @@ int main() {
                 cadastrarCliente(&clientes, &numClientes);
                 break;
             case 3:
+                listar_filme();
                 system("cls");
                 break;
             case 4:
+                listar_cliente();
                 system("cls");
                 break;
             case 5:
