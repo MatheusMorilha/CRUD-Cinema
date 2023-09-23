@@ -4,18 +4,17 @@
 #include <string.h>
 
 #include "Cadastro.h"
-
-
+#include "Consulta.h"
 
 int main () {
     int option = 0;
     int menuLoop = 0;
  do{
     system("cls");
-    printf("\n=============== Menu ==================\n");
+    printf("\n=============== Menu ====================\n");
     printf("|  [1] - Cadastrar                      |\n");
-    printf("|  [2] - Listar todos os filmes         |\n");
-    printf("|  [3] - Listar todos os clientes       |\n");
+    printf("|  [2] - Listar filmes/clientes         |\n");
+    printf("|  [3] - Comprar ingresso               |\n");
     printf("|  [4] - Alterar cadastros              |\n");
     printf("|  [5] - Excluir                        |\n");
     printf("|  [6] - Limpar a Tela                  |\n");
@@ -33,10 +32,14 @@ int main () {
         
         case 2:
             system("cls");
-            
+            Listar();
             break;
-        
-        
+        case 7:
+            menuLoop = 1;
+            break;
+            
+        default:
+            break;;
       
     }
 
