@@ -2,7 +2,6 @@
 
 #ifndef MEU_STRUCT_H
 #define MEU_STRUCT_H
-
 struct dadosFilmes {
     int id;
     char nome[30];
@@ -10,9 +9,9 @@ struct dadosFilmes {
     float preco;
 };
 
-struct dadosClientes{
+struct dadosClientes {
     int codigo;
-    char nome [30];
+    char nome[30];
     int idade;
 };
 

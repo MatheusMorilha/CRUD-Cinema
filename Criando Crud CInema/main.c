@@ -4,41 +4,63 @@
 #include <string.h>
 
 #include "Cadastro.h"
+#include "Comprar.h"
+#include "struct.h"
 
 
 
-int main () {
-    int option = 0;
-    int menuLoop = 0;
- do{
+
+int main() {
+    struct dadosFilmes *filmes = NULL;
+    struct dadosClientes *clientes = NULL;
+    int numFilmes = 0;
+    int numClientes = 0;
+    int opcao;
     system("cls");
-    printf("\n=============== Menu ==================\n");
-    printf("|  [1] - Cadastrar                      |\n");
-    printf("|  [2] - Listar todos os filmes         |\n");
-    printf("|  [3] - Listar todos os clientes       |\n");
-    printf("|  [4] - Alterar cadastros              |\n");
-    printf("|  [5] - Excluir                        |\n");
-    printf("|  [6] - Limpar a Tela                  |\n");
-    printf("|  [7] - Sair do Programa               |\n");
-    printf("=========================================\n");
-    printf("Digite a opcao desejada: ");
-    fflush(stdin);
-    scanf("%d", &option);
+    do {
+        
+        printf("\n===============Menu=============\n");
+        printf(" |1. Cadastrar Filme              |\n");
+        printf(" |2. Cadastrar Cliente            |\n");
+        printf(" |3. Listar Filmes                |\n");
+        printf(" |4. Listar Clientes              |\n");
+        printf(" |5. Vender ingresso              |\n");
+        printf(" |0. Sair                         |\n");
+        printf("  ========Escolha uma opcao=======\n ");
+        scanf("%d", &opcao);
 
-    switch (option){
-        case 1:
+        switch (opcao) {
+            case 1:
             system("cls");
-            Cadastrar();
-            break;
-        
-        case 2:
-            system("cls");
-            
-            break;
-        
-        
-      
-    }
+                cadastrarFilme(&filmes, &numFilmes);
+                break;
+            case 2:
+                system("cls");
+                cadastrarCliente(&clientes, &numClientes);
+                break;
+            case 3:
+                system("cls");
+                break;
+            case 4:
+                system("cls");
+                break;
+            case 5:
+                system("cls");
+                comprar(clientes, numClientes,filmes, numFilmes);
+                break;
+            case 0:
+                system("cls");
+                printf("Saindo do programa.\n");
+                break;
+            default:
+                printf("Opcao invalida. Tente novamente.\n");
+                break;
+        }
+    } while (opcao != 0);
 
- }while (menuLoop == 0);
+
+    free(filmes);
+    free(clientes);
+
+    return 0;
 }
