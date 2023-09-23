@@ -1,15 +1,10 @@
 Id: 0
-Nome: Top Gun
-Ano Lancamento: 2023
-Preco: 19.00
+Nome: w
+Ano Lancamento: 2
+Preco: 3.00
 
 Id: 1
-Nome: Homem aranha
-Ano Lancamento: 2022
-Preco: 50.00
-
-Id: 2
-Nome: senhor dos aneis
-Ano Lancamento: 2020
-Preco: 19.00
+Nome: w
+Ano Lancamento: 2
+Preco: 2.00
 
