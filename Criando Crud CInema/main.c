@@ -32,20 +32,20 @@ int main() {
 
         switch (opcao) {
             case 1:
-                system("cls");
                 cadastrarFilme(&filmes, &numFilmes);
+                system("cls");
                 break;
             case 2:
-                system("cls");
                 cadastrarCliente(&clientes, &numClientes);
+                system("cls");
                 break;
             case 3:
-                listar_filme();
                 system("cls");
+                listar_filme(filmes, numFilmes);
                 break;
             case 4:
-                listar_cliente();
                 system("cls");
+                listar_cliente(clientes, numClientes);
                 break;
             case 5:
                 system("cls");

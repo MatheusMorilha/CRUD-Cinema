@@ -1,9 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
 #include "struct.h"
-
-
 
 void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes *filmes, int numFilmes) {
     int i,op1,op2;

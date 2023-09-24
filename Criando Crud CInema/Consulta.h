@@ -1,62 +1,43 @@
-void listar_filme(){
+void listar_filme(struct dadosFilmes *filmes, int numFilmes){
     while(1){
-
-        FILE *filmes = fopen("filmes.txt", "r");
-        if (filmes == NULL){
-            printf("Erro ao abrir o arquivo.\n");
-            return;
+        if(filmes == NULL){
+            printf("Ainda nao foi cadastrado nenhum filme!\n");
         }else{
-            int vazio = fgetc(filmes);
-            if(vazio == EOF){
-                printf("Ainda nao foi cadastrado nenhum filme\n");
-            }else{
-                fseek(filmes, 0, SEEK_SET);
-                char linhaf[100];
-                while(fgets(linhaf, sizeof(linhaf), filmes)){
-                    printf("%s", linhaf);
-                }
+            printf("---Filmes---\n");
+            for(int i = 0; i < numFilmes; i++){
+                printf("Id: %i\n", i);
+                printf("Nome: %s\n", filmes[i].nome);
+                printf("Idade: %i\n", filmes[i].anoLanc);
+                printf("Idade: %.2f\n\n", filmes[i].preco);
             }
-            fclose(filmes);
         }
-
-        printf("\nDigite 0 para voltar para o menu principal: ");
+        printf("Digite 0 para voltar para o menu principal: ");
         int zero;
         scanf("%d", &zero);
-        if (zero == 0) {
+        if (zero == 0){
             break;
         }
     }
 }    
 
 
-void listar_cliente(){
+void listar_cliente(struct dadosClientes *clientes, int numClientes){
     while (1){
-
-        FILE *clientes = fopen("clientes.txt", "r");
-        if (clientes == NULL){
-            printf("Erro ao abrir o arquivo.\n");
-            return;
+        if(clientes == NULL){
+            printf("Ainda nao foi cadastrado nenhum cliente!\n");
         }else{
-            int vazio = fgetc(clientes);
-            if(vazio == EOF){
-                printf("Ainda nao foi cadastrado nenhum cliente\n");
-            }else{
-                fseek(clientes, 0, SEEK_SET);
-                char linhac[100];
-                while (fgets(linhac, sizeof(linhac), clientes)){
-                    printf("%s", linhac);
-                }
+            printf("---Clientes---\n");
+            for(int i = 0; i < numClientes; i++){
+                printf("Id: %i\n", i);
+                printf("Nome: %s\n", clientes[i].nome);
+                printf("Idade: %i\n\n", clientes[i].idade);
             }
-            fclose(clientes);
         }
-
-        printf("\nDigite 0 para voltar para o menu principal: ");
+        printf("Digite 0 para voltar para o menu principal: ");
         int zero;
         scanf("%d", &zero);
-        if (zero == 0) {
+        if (zero == 0){
             break;
         }
     }
-    
-
 }
