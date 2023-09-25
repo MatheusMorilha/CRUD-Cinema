@@ -6,6 +6,7 @@
 #include "Cadastro.h"
 #include "Consulta.h"
 #include "Comprar.h"
+#include "Excluir.h"
 #include "struct.h"
 
 
@@ -26,6 +27,8 @@ int main() {
         printf(" |3. Listar Filmes                |\n");
         printf(" |4. Listar Clientes              |\n");
         printf(" |5. Vender ingresso              |\n");
+        printf(" |6. Excluir Filme                |\n");
+        printf(" |7. Excluir Cliente              |\n");
         printf(" |0. Sair                         |\n");
         printf("  ========Escolha uma opcao=======\n ");
         scanf("%d", &opcao);
@@ -51,6 +54,14 @@ int main() {
                 system("cls");
                 comprar(clientes, numClientes,filmes, numFilmes);
                 break;
+            case 6:
+                system("cls");
+                excluirFilme(&filmes, &numFilmes);
+                break;
+            case 7:
+                system("cls");
+                excluirCliente(&filmes, &numClientes);
+                break;    
             case 0:
                 system("cls");
                 printf("Saindo do programa.\n");

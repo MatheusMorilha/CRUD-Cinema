@@ -13,7 +13,7 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
 
     printf("====Escolha o Cliente====\n");
     for(i = 0; i < numClientes; i++) {
-        printf("%i -- Nome: %s\n",i ,clientes[i].nome);
+        printf("%i -- Nome: %s\n",i+1 ,clientes[i].nome);
         printf("\n");
     }
     scanf("%i",&op1);
@@ -23,7 +23,7 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
 
     printf("====Escolha o Filme====\n");
     for(i = 0; i < numFilmes; i++) {
-        printf("%i -- Nome: %s\n",i ,filmes[i].nome);
+        printf("%i -- Nome: %s\n",i+1 ,filmes[i].nome);
         printf("\n");
     }
     scanf("%i",&op2);

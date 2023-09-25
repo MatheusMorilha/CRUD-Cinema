@@ -5,7 +5,7 @@ void listar_filme(struct dadosFilmes *filmes, int numFilmes){
         }else{
             printf("---Filmes---\n");
             for(int i = 0; i < numFilmes; i++){
-                printf("Id: %i\n", i);
+                printf("Id: %i\n", i+1);
                 printf("Nome: %s\n", filmes[i].nome);
                 printf("Idade: %i\n", filmes[i].anoLanc);
                 printf("Idade: %.2f\n\n", filmes[i].preco);
@@ -28,7 +28,7 @@ void listar_cliente(struct dadosClientes *clientes, int numClientes){
         }else{
             printf("---Clientes---\n");
             for(int i = 0; i < numClientes; i++){
-                printf("Id: %i\n", i);
+                printf("Id: %i\n", i+1);
                 printf("Nome: %s\n", clientes[i].nome);
                 printf("Idade: %i\n\n", clientes[i].idade);
             }
