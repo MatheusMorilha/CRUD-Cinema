@@ -11,9 +11,11 @@ void listar_filme(struct dadosFilmes *filmes, int numFilmes){
                 printf("Idade: %.2f\n\n", filmes[i].preco);
             }
         }
+    
         printf("Digite 0 para voltar para o menu principal: ");
         int zero;
         scanf("%d", &zero);
+        system("cls");
         if (zero == 0){
             break;
         }
@@ -36,6 +38,7 @@ void listar_cliente(struct dadosClientes *clientes, int numClientes){
         printf("Digite 0 para voltar para o menu principal: ");
         int zero;
         scanf("%d", &zero);
+        system("cls");
         if (zero == 0){
             break;
         }

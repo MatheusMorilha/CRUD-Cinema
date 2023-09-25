@@ -67,6 +67,7 @@ int main() {
                 printf("Saindo do programa.\n");
                 break;
             default:
+            system("cls");
                 printf("Opcao invalida. Tente novamente.\n");
                 break;
         }

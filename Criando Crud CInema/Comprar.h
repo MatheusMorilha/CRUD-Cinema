@@ -16,21 +16,24 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
         printf("%i -- Nome: %s\n",i+1 ,clientes[i].nome);
         printf("\n");
     }
+    printf(">> ");
     scanf("%i",&op1);
 
 
 
-
-    printf("====Escolha o Filme====\n");
+    printf("\n====Escolha o Filme====\n");
     for(i = 0; i < numFilmes; i++) {
         printf("%i -- Nome: %s\n",i+1 ,filmes[i].nome);
         printf("\n");
     }
+    printf(">> ");
     scanf("%i",&op2);
     valor = filmes[op2].preco;
 
-    printf("Tem direito a meia entrada? se tiver escreva: S \n");
+    printf("\nTem direito a meia entrada? se tiver escreva: S \n");
+    printf(">> ");
     scanf("%s",&op3);
+
     if(op3=='s' || op3=='S'){
         valor=valor/2;
     }

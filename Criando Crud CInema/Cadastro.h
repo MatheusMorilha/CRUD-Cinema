@@ -1,38 +1,5 @@
 #include "struct.h"
 
-void cadastrarCliente(struct dadosClientes **clientes, int *numClientes) {
-    system("cls");
-    int opcao = 1;
-    
-    do{
-        printf("====Cadastro de Cliente====\n");
-        (*numClientes)++;
-        *clientes = (struct dadosClientes *)realloc(*clientes, (*numClientes) * sizeof(struct dadosClientes));
-
-        if (*clientes == NULL) {
-            printf("Erro ao alocar memoria.\n");
-            exit(1);
-        }
-
-        (*clientes)[*numClientes - 1].codigo = *numClientes;
-        printf("Nome: ");
-        fflush(stdin);
-        scanf("%[^\n]s", (*clientes)[*numClientes - 1].nome);
-
-        
-        printf("Idade: ");
-        fflush(stdin);
-        scanf("%d", &(*clientes)[*numClientes - 1].idade);
-        system("cls");
-        printf("Cliente cadastrado com sucesso!\n");
-
-        printf("\nDeseja cadastrar outro cliente? (1 - Sim / 0 - Nao): ");
-        fflush(stdin);
-        scanf("%d", &opcao);    
-        system("cls");    
-    }while(opcao == 1);
-}
-
 void cadastrarFilme(struct dadosFilmes **filmes, int *numFilmes) {
     system("cls");
     int opcao = 1;
@@ -68,3 +35,38 @@ void cadastrarFilme(struct dadosFilmes **filmes, int *numFilmes) {
         system("cls");
     }while(opcao == 1);
 }
+
+void cadastrarCliente(struct dadosClientes **clientes, int *numClientes) {
+    system("cls");
+    int opcao = 1;
+    
+    do{
+        printf("====Cadastro de Cliente====\n");
+        (*numClientes)++;
+        *clientes = (struct dadosClientes *)realloc(*clientes, (*numClientes) * sizeof(struct dadosClientes));
+
+        if (*clientes == NULL) {
+            printf("Erro ao alocar memoria.\n");
+            exit(1);
+        }
+
+        (*clientes)[*numClientes - 1].codigo = *numClientes;
+        printf("Nome: ");
+        fflush(stdin);
+        scanf("%[^\n]s", (*clientes)[*numClientes - 1].nome);
+
+        
+        printf("Idade: ");
+        fflush(stdin);
+        scanf("%d", &(*clientes)[*numClientes - 1].idade);
+        system("cls");
+        printf("Cliente cadastrado com sucesso!\n");
+
+        printf("\nDeseja cadastrar outro cliente? (1 - Sim / 0 - Nao): ");
+        fflush(stdin);
+        scanf("%d", &opcao);    
+        system("cls");    
+    }while(opcao == 1);
+}
+
+
