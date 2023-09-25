@@ -7,6 +7,9 @@
 #include "Consulta.h"
 #include "Comprar.h"
 #include "Excluir.h"
+#include "Alterar.h"
+
+#include "AlterarDadosW.h"
 #include "struct.h"
 
 
@@ -26,11 +29,15 @@ int main() {
         printf(" |2. Cadastrar Cliente            |\n");
         printf(" |3. Listar Filmes                |\n");
         printf(" |4. Listar Clientes              |\n");
-        printf(" |5. Vender ingresso              |\n");
-        printf(" |6. Excluir Filme                |\n");
-        printf(" |7. Excluir Cliente              |\n");
+        printf(" |5. Alterar Filmes               |\n");
+        printf(" |6. Alterar Clientes             |\n");
+        printf(" |7. Vender ingresso              |\n");
+        printf(" |8. Excluir Filme                |\n");
+        printf(" |9. Excluir Cliente              |\n");
+        printf(" |10. AlterarDadosW                |\n");
         printf(" |0. Sair                         |\n");
         printf("  ========Escolha uma opcao=======\n ");
+        printf(">> ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -52,16 +59,27 @@ int main() {
                 break;
             case 5:
                 system("cls");
-                comprar(clientes, numClientes,filmes, numFilmes);
+                atualizarFilme(filmes, numFilmes);
                 break;
             case 6:
                 system("cls");
-                excluirFilme(&filmes, &numFilmes);
+                atualizarCliente(filmes, numFilmes);
                 break;
             case 7:
                 system("cls");
-                excluirCliente(&filmes, &numClientes);
-                break;    
+                comprar(clientes, numClientes,filmes, numFilmes);
+                break;
+            case 8:
+                system("cls");
+                excluirFilme(&filmes, &numFilmes);
+                break;
+            case 9:
+                system("cls");
+                excluirCliente(&clientes, &numClientes);
+                break; 
+            case 10:
+                AlterarDados();
+                break;      
             case 0:
                 system("cls");
                 printf("Saindo do programa.\n");

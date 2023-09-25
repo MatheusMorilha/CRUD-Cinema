@@ -1,10 +1,42 @@
 Id: 0
-Nome: w
-Ano Lancamento: 2
-Preco: 3.00
+Nome: top gun
 
-Id: 1
-Nome: w
-Ano Lancamento: 2
-Preco: 2.00
+Ano Lancamento: 2020
+Preco: 19.00
 
+Id: 0
+Nome: top gun
+
+Ano Lancamento: 2023
+Preco: 19.00
+
+
+id : 1
+Nome do filme: Jurassic Park
+Horario : 20:00
+Preco : 22.00
+
+id : 2
+Nome do filme: Senhor dos Aneis: O Retorno do Rei
+Horario : 15:30
+Preco : 26.00
+
+id : 3
+Nome do filme: Matrix
+Horario : 19:00
+Preco : 22.00;
+
+id : 4
+Nome do filme: Jogos Vorazes
+Horario : 19:45
+Preco : 19.00;
+
+id : 5
+Nome do filme: Avatar
+Horario : 20:4
+Preco : 10.95;
+
+id : 6
+Nome do filme: E.T. - O Extraterrestre
+Horario : 14:45
+Preco : 19.99;

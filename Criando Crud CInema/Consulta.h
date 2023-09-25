@@ -1,14 +1,14 @@
 void listar_filme(struct dadosFilmes *filmes, int numFilmes){
     while(1){
         if(filmes == NULL){
-            printf("Ainda nao foi cadastrado nenhum filme!\n");
+            printf("Ainda nao foi cadastrado nenhum filme!\n\n");
         }else{
             printf("====Filmes====\n");
             for(int i = 0; i < numFilmes; i++){
                 printf("Id: %i\n", i+1);
                 printf("Nome: %s\n", filmes[i].nome);
-                printf("Idade: %i\n", filmes[i].anoLanc);
-                printf("Idade: %.2f\n\n", filmes[i].preco);
+                printf("Ano de Lancamento: %i\n", filmes[i].anoLanc);
+                printf("Preco: %.2f\n\n", filmes[i].preco);
             }
         }
     
@@ -26,7 +26,7 @@ void listar_filme(struct dadosFilmes *filmes, int numFilmes){
 void listar_cliente(struct dadosClientes *clientes, int numClientes){
     while (1){
         if(clientes == NULL){
-            printf("Ainda nao foi cadastrado nenhum cliente!\n");
+            printf("Ainda nao foi cadastrado nenhum cliente!\n\n");
         }else{
             printf("====Clientes====\n");
             for(int i = 0; i < numClientes; i++){
