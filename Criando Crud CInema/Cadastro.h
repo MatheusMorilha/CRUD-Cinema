@@ -1,3 +1,5 @@
+// Matheus Grupo 02 ficou com a parte de Cadastro.
+
 #include "struct.h"
 
 void cadastrarFilme(struct dadosFilmes **filmes, int *numFilmes) {

@@ -1,9 +1,7 @@
-id : 1Nome do filme: Jurassic Park02
-Ano de lancamento: 2013
-Preco: 15.55
-
-
-Nome do filme: Senhor dos Aneis: O Retorno do Rei
+id : 1Nome do filme: Jurassic Park02Nome do filme: 0
+Ano de lancamento: 0
+Preco: 0.00
+lme: Senhor dos Aneis: O Retorno do Rei
 Horario : 15:30
 Preco : 26.00
 

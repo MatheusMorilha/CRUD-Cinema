@@ -1,3 +1,5 @@
+// João Grupo 02 ficou com a parte de Comprar.
+
 #include "struct.h"
 
 void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes *filmes, int numFilmes) {

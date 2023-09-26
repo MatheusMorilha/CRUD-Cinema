@@ -1,3 +1,5 @@
+// Heloisa Grupo 02 ficou com a parte de Consulta.
+
 void listar_filme(struct dadosFilmes *filmes, int numFilmes){
     while(1){
         if(filmes == NULL){

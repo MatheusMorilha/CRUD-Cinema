@@ -1,3 +1,5 @@
+// Vitor Grupo 02 ficou com a parte de Excluir.
+
 #include "struct.h"
 
 void excluirFilme(struct dadosFilmes **filmes, int *numFilmes) {
