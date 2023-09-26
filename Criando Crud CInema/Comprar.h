@@ -11,6 +11,7 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
     }
 
     while(ver==1){
+    ver=1;
     printf("====Escolha o Cliente====\n");
     for(i = 0; i < numClientes; i++) {
         printf("%i -- Nome: %s\n",i+1 ,clientes[i].nome);
@@ -21,7 +22,7 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
     scanf("%i",&op1);
     op1--;
 
-    if(clientes[op1].nome==NULL){
+    if(numClientes>op1){
     ver=0;
     }
     }
@@ -29,6 +30,7 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
     
     ver=1;
     while(ver==1){
+    ver=1;
     printf("\n====Escolha o Filme====\n");
     for(i = 0; i < numFilmes; i++) {
         printf("%i -- Nome: %s\n",i+1 ,filmes[i].nome);
@@ -38,7 +40,7 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
     scanf("%i",&op2);
     op2--;
 
-    if(op2 >= numClientes){
+    if(numFilmes > op2){
     ver=0;
         }
     }
