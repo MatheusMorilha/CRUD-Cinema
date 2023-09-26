@@ -54,7 +54,6 @@ void cadastrarCliente(struct dadosClientes **clientes, int *numClientes) {
         printf("Nome: ");
         fflush(stdin);
         scanf("%[^\n]s", (*clientes)[*numClientes - 1].nome);
-
         
         printf("Idade: ");
         fflush(stdin);

@@ -1,22 +1,8 @@
-Id: 0
-Nome: top gun
-
-Ano Lancamento: 2020
-Preco: 19.00
-
-Id: 0
-Nome: top gun
-
-Ano Lancamento: 2023
-Preco: 19.00
+id : 1Nome do filme: Jurassic Park02
+Ano de lancamento: 2013
+Preco: 15.55
 
 
-id : 1
-Nome do filme: Jurassic Park
-Horario : 20:00
-Preco : 22.00
-
-id : 2
 Nome do filme: Senhor dos Aneis: O Retorno do Rei
 Horario : 15:30
 Preco : 26.00
@@ -24,19 +10,89 @@ Preco : 26.00
 id : 3
 Nome do filme: Matrix
 Horario : 19:00
-Preco : 22.00;
+Preco : 22.00
 
 id : 4
 Nome do filme: Jogos Vorazes
 Horario : 19:45
-Preco : 19.00;
+Preco : 19.00
 
 id : 5
 Nome do filme: Avatar
-Horario : 20:4
-Preco : 10.95;
+Horario : 20:45
+Preco : 10.95
 
 id : 6
 Nome do filme: E.T. - O Extraterrestre
 Horario : 14:45
-Preco : 19.99;
+Preco : 19.99
+
+id : 7
+Nome do filme: Harry Potter e a Pedra Filosofal
+Horario : 16:15
+Preco : 21.50
+
+id : 8
+Nome do filme: Vingadores: Ultimato
+Horario : 18:30
+Preco : 24.75
+
+id : 9
+Nome do filme: Star Wars: O Império Contra-Ataca
+Horario : 17:30
+Preco : 23.00
+
+id : 10
+Nome do filme: O Poderoso Chefão
+Horario : 21:15
+Preco : 20.00
+
+id : 11
+Nome do filme: O Rei Leão
+Horario : 13:00
+Preco : 18.50
+
+id : 12
+Nome do filme: Forrest Gump
+Horario : 16:45
+Preco : 17.25
+
+id : 13
+Nome do filme: Interestelar
+Horario : 22:00
+Preco : 25.00
+
+id : 14
+Nome do filme: Pantera Negra
+Horario : 17:00
+Preco : 21.00
+
+id : 15
+Nome do filme: Mulher Maravilha
+Horario : 18:15
+Preco : 20.50
+
+id : 16
+Nome do filme: Titanic
+Horario : 20:30
+Preco : 19.75
+
+id : 17
+Nome do filme: O Senhor dos Anéis: A Sociedade do Anel
+Horario : 19:30
+Preco : 23.50
+
+id : 18
+Nome do filme: A Origem
+Horario : 16:00
+Preco : 22.25
+
+id : 19
+Nome do filme: O Lobo de Wall Street
+Horario : 21:45
+Preco : 18.75
+
+id : 20
+Nome do filme: Gladiador 
+Ano de lancamento: 1985
+Preco: 19.99

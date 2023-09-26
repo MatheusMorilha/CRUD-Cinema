@@ -1,7 +1,7 @@
 #include "struct.h"
 
 void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes *filmes, int numFilmes) {
-    int i,op1,op2;
+    int i,op1,op2,ver=1;
     float valor;
     char op3;
     
@@ -10,17 +10,25 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
         return;
     }
 
-
+    while(ver==1){
     printf("====Escolha o Cliente====\n");
     for(i = 0; i < numClientes; i++) {
         printf("%i -- Nome: %s\n",i+1 ,clientes[i].nome);
         printf("\n");
     }
+
     printf(">> ");
     scanf("%i",&op1);
+    op1--;
 
+    if(clientes[op1].nome==NULL){
+    ver=0;
+    }
+    }
 
-
+    
+    ver=1;
+    while(ver==1){
     printf("\n====Escolha o Filme====\n");
     for(i = 0; i < numFilmes; i++) {
         printf("%i -- Nome: %s\n",i+1 ,filmes[i].nome);
@@ -28,6 +36,13 @@ void comprar(struct dadosClientes *clientes, int numClientes,struct dadosFilmes 
     }
     printf(">> ");
     scanf("%i",&op2);
+    op2--;
+
+    if(op2 >= numClientes){
+    ver=0;
+        }
+    }
+
     valor = filmes[op2].preco;
 
     printf("\nTem direito a meia entrada? se tiver escreva: S \n");

@@ -37,7 +37,6 @@ void atualizarCliente(struct dadosClientes *clientes, int numClientes) {
         printf("Digite a nova idade do cliente: ");
         fflush(stdin);
         scanf("%d", &clientes[id - 1].idade);
-        fflush(stdin);
         system("cls");
         printf("Cliente atualizado com sucesso!\n");
     } else {

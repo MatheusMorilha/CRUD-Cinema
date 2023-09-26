@@ -9,7 +9,7 @@
 #include "Excluir.h"
 #include "Alterar.h"
 
-#include "AlterarDadosW.h"
+#include "AlterarDados.h"
 #include "struct.h"
 
 
@@ -34,7 +34,7 @@ int main() {
         printf(" |7. Vender ingresso              |\n");
         printf(" |8. Excluir Filme                |\n");
         printf(" |9. Excluir Cliente              |\n");
-        printf(" |10. AlterarDadosW                |\n");
+        printf(" |10. AlterarDadosW               |\n");
         printf(" |0. Sair                         |\n");
         printf("  ========Escolha uma opcao=======\n ");
         printf(">> ");
